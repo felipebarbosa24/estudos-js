@@ -1,3 +1,4 @@
+//Calcula e informa ao usuário se ele foi APROVADO ou REPROVADO.
 var media = 12
 var n1 = 5.5
 var n2 = 8.0

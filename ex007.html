@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="u1" id="u1"> +
+    <input type="number" name="u2" id="u2"> +
+    <input type="number" name="u3" id="u3"> +
+    <input type="number" name="u4" id="u4"> 
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar(){
+            var u1 = window.document.getElementById("u1");
+            var u2 = window.document.getElementById("u2");
+            var u3 = window.document.getElementById("u3");
+            var u4 = window.document.getElementById("u4");
+            var res = window.document.getElementById("res");
+            var n1 = Number(u1.value);
+            var n2 = Number(u2.value);
+            var n3 = Number(u3.value);
+            var n4 = Number(u4.value);
+            var total = n1 + n2 + n3 + n4;
+            var m_anual = total / 4;
+            res.innerHTML = `A soma de todas unidades é <strong>${total}</strong> e sua média anual é de <strong>${m_anual}</strong>`;
+        }
+    </script>
+</body>
+</html>

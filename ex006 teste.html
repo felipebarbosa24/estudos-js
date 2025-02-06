@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+    <style>
+        div#quadrado {
+            font: normal 20pt Arial;
+            text-align: center;
+            color: white;
+            background: green;
+            width: 250px;
+            height: 250px;
+            line-height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="quadrado">
+        Interaja...
+    </div>
+    <script>
+        var quadrado = window.document.getElementById("quadrado");
+        
+        quadrado.addEventListener("click", clicar);
+        quadrado.addEventListener("mouseenter", entrar);
+        quadrado.addEventListener("mouseout", sair);
+
+        function clicar(){
+            quadrado.innerText = "Você clicou!";
+            quadrado.style.background = "red";
+        }
+
+        function sair(){
+            quadrado.innerText = "Você saiu!";
+            quadrado.style.background = "green";
+        }
+
+        function entrar(){
+            quadrado.innerText = "Você entrou!";
+        }
+    </script>
+</body>
+</html>
